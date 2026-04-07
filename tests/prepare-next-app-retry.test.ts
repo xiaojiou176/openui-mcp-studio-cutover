@@ -11,14 +11,18 @@ import {
 const tempDirs: string[] = [];
 
 async function createTempBuildDir(): Promise<string> {
-	const dir = await fs.mkdtemp(path.join(os.tmpdir(), "openui-prepare-next-app-"));
+	const dir = await fs.mkdtemp(
+		path.join(os.tmpdir(), "openui-prepare-next-app-"),
+	);
 	tempDirs.push(dir);
 	return dir;
 }
 
 afterEach(async () => {
 	await Promise.all(
-		tempDirs.splice(0).map((dir) => fs.rm(dir, { recursive: true, force: true })),
+		tempDirs
+			.splice(0)
+			.map((dir) => fs.rm(dir, { recursive: true, force: true })),
 	);
 });
 
@@ -66,7 +70,11 @@ describe("prepare-next-app retry classifier", () => {
 			"{}",
 			"utf8",
 		);
-		await fs.writeFile(path.join(buildDir, "routes-manifest.json"), "{}", "utf8");
+		await fs.writeFile(
+			path.join(buildDir, "routes-manifest.json"),
+			"{}",
+			"utf8",
+		);
 
 		await expect(
 			isPreparedBuildReusable({
@@ -84,7 +92,11 @@ describe("prepare-next-app retry classifier", () => {
 			"{}",
 			"utf8",
 		);
-		await fs.writeFile(path.join(buildDir, "routes-manifest.json"), "{}", "utf8");
+		await fs.writeFile(
+			path.join(buildDir, "routes-manifest.json"),
+			"{}",
+			"utf8",
+		);
 		await fs.writeFile(
 			path.join(buildDir, "prerender-manifest.json"),
 			JSON.stringify({ version: 1, routes: {} }),
