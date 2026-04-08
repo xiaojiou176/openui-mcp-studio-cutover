@@ -100,7 +100,7 @@ describe("sensitive surface audit", () => {
 			path.join(root, "docs", "leak.md"),
 			[
 				`owner = "${personalEmail}"`,
-				["contact = \"", "phone", ": ", personalPhone, "\""].join(""),
+				['contact = "', "phone", ": ", personalPhone, '"'].join(""),
 				`root = "${personalChromeRoot}"`,
 				"",
 			].join("\n"),
