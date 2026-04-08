@@ -217,9 +217,7 @@ describe("github sensitive surface review", () => {
 		expect(result.ok).toBe(true);
 		expect(result.report.codeSearch.totalFindings).toBe(0);
 		expect(result.report.notes).toEqual(
-			expect.arrayContaining([
-				expect.stringContaining("rate limit"),
-			]),
+			expect.arrayContaining([expect.stringContaining("rate limit")]),
 		);
 	});
 });
