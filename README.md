@@ -724,6 +724,8 @@ real engineering trail.
 - `npm run release:public-safe:check`
   - confirms public-release discipline rather than "it worked on my machine"
   - runs the strict docs lane in addition to release-readiness and remote/history checks
+- `npm run security:oss:audit`
+  - confirms the repo-local OSS security bundle across history, trufflehog, dependency review preflight, and supplemental scanners
 - `npm run governance:history-hygiene:check`
   - makes sure release confidence is not based on current-tree scans alone
 

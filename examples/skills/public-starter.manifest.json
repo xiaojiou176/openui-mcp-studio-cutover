@@ -13,7 +13,7 @@
   },
   "audience": [
     "maintainers designing skill-shaped integrations",
-    "builders who need a bounded starter pack before any future Skills runtime exists",
+    "builders who need a bounded official skill product line before any future Skills runtime exists",
     "operators who want plugin-grade starter bundles for Codex, Claude Code, or OpenClaw-style hosts"
   ],
   "role": "Official repo-owned skill product line for honest host installs and unlisted packaging.",
@@ -83,7 +83,7 @@
     },
     {
       "path": "tooling/cli/openui.mjs",
-      "why": "Exposes repo-local builder commands that this starter pack points readers toward."
+      "why": "Exposes repo-local builder commands that this skill product line points readers toward."
     },
     {
       "path": "examples/public-distribution/openclaw-public-ready.manifest.json",
@@ -101,7 +101,7 @@
     "examples/public-distribution/troubleshooting.md"
   ],
   "operatorOnlyFollowThrough": [
-    "If this starter pack is later promoted into a public runtime, shared docs, contracts, CLI, and verification must all be updated in the same wave.",
+    "If this skill product line is later promoted into a public runtime, shared docs, contracts, CLI, and verification must all be updated in the same wave.",
     "Any future marketplace submission or vendor review remains outside this starter pack."
   ]
 }
