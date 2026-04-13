@@ -49,6 +49,7 @@ needs human judgment?"
 Start here if your question is "what builder surface is actually current?"
 
 - [`README.md`](../README.md)
+- [`docs/architecture.md`](./architecture.md)
 - [`DISTRIBUTION.md`](../DISTRIBUTION.md)
 - [`INTEGRATIONS.md`](../INTEGRATIONS.md)
 - [`manifest.yaml`](../manifest.yaml)
